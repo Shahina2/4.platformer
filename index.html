@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Спасение кота — платформер</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-wrap">
+    <h1>🐱 Спасение кота</h1>
+    <p class="hint">
+      ← → или A/D — движение · Space или W — прыжок ·
+      Собери 3 рыбки и доберись до кота. Шипы — поражение!
+    </p>
+
+    <div class="hud">
+      <span>🐟 Очки: <b id="score">0</b>/3</span>
+      <span>🏆 Рекорд: <b id="best">0</b></span>
+    </div>
+
+    <div class="canvas-box">
+      <canvas id="game" width="800" height="450"></canvas>
+      <div id="overlay" class="overlay hidden">
+        <div class="overlay-card" id="overlayText"></div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="btnStart">▶ Старт</button>
+      <button id="btnPause">⏸ Пауза</button>
+      <button id="btnRestart">↻ Заново</button>
+    </div>
+
+    <div class="touch-controls">
+      <button data-key="left" aria-label="Влево">◀</button>
+      <button data-key="right" aria-label="Вправо">▶</button>
+      <button data-key="jump" aria-label="Прыжок">⤒</button>
+    </div>
+  </div>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
